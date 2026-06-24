@@ -1,10 +1,16 @@
 import { defineConfig } from 'vite';
 import fs from 'fs';
 
-const header = fs.readFileSync(
+
+let header = fs.readFileSync(
   './userscript-header.js',
   'utf8'
 );
+
+// Replace the version placeholder with the actual version from environment variable
+const version = process.env.VERSION ?? '0.0.0-dev';
+header = header.replace('__VERSION__', version);
+
 
 export default defineConfig({
   build: {

@@ -9,7 +9,7 @@
 (function() {
 	//#region src/index.ts
 	function main() {
-		console.log("Hello, MCU Tools!");
+		console.log("Hello, MCU Tools! v2.0");
 	}
 	main();
 	//#endregion
